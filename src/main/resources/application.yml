@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/teste?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: teste
-    password: teste
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 
   jpa:
     hibernate:
       ddl-auto: update

@@ -5,17 +5,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-@Table(name = "produtos")
-public class Produto {
+@Table(name = "products")
+public class Product {
     @Id
     @Column
     private String id;
     @Column
-    private String nome;
+    private String name;
     @Column
-    private String descricao;
+    private String description;
     @Column
-    private double preco;
+    private double price;
 
 
     public String getId() {
@@ -24,28 +24,28 @@ public class Produto {
     public void setId(String id) {
         this.id = id;
     }
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getDescricao() {
-        return descricao;
+    public String getDescription() {
+        return description;
     }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescription(String description) {
+        this.description = description;
     }
-    public double getPreco() {
-        return preco;
+    public double getPrice() {
+        return price;
     }
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public void setPrice(double price) {
+        this.price = price;
     }
     
     @Override
     public String toString() {
-        return "Produto [id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco + "]";
+        return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price + "]";
     }
     
 }
