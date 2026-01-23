@@ -1,5 +1,6 @@
 package com.dev.produtosapi.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
@@ -22,6 +23,9 @@ public class ProductService {
 
     public Product updateProduct(Product product){
         return productRepository.save(product);
+    }
+    public List<Product> getAllProducts(){
+        return productRepository.findAll();
     }
 
     public Product getProductById(String id){

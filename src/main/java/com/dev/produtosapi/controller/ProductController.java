@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import com.dev.produtosapi.model.Product;
 import com.dev.produtosapi.service.ProductService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -23,9 +25,9 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.CREATED).body(salvo);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Product> getProductById(@PathVariable String id) {
-        var product = productService.getProductById(id);
+    @GetMapping()
+    public ResponseEntity<List<Product>> getAllProducts() {
+        List<Product> product = productService.getAllProducts();
         if (product != null) {
             return ResponseEntity.ok(product);
         } else {
