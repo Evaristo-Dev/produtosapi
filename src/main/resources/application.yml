@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://mysql_container:3306/produtosapi?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/produtosapi?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: testes
   jpa:
